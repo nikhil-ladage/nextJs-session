@@ -18,8 +18,15 @@ export default function Home() {
             Get started by editing <code>src/app/page.tsx</code>.
           </li>
           <li>Save and see your changes instantly.</li>
+          <li>
+            Current version -{" "}
+            <code>
+              {process.env.NEXT_PUBLIC_PACKAGE_VERSION
+                ? `v${process.env.NEXT_PUBLIC_PACKAGE_VERSION}`
+                : "Not available"}
+            </code>
+          </li>
         </ol>
-
         <div className={styles.ctas}>
           <a
             className={styles.primary}
